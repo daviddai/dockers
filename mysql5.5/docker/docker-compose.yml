@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mysql5.5:
+    build: ../
+    container_name: "mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      - my-data:/var/lib/mysql
+
+volumes:
+  my-data:
